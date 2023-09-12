@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>TicTacToe (0,X)</li>
+        </ul>
+    </nav>
+
+    <!-- game container mein aik left side aik right side -->
+    <div class="gameContainer">
+        <div class="container">
+            <div class="line"></div>
+
+            <!-- 9 grid 3x3 -->
+            <div class="box bt-0 bl-0"><span class="boxtext"></span></div>
+            <div class="box bt-0 bl-0"><span class="boxtext"></span></div>
+            <div class="box bt-0 br-0 bl-0"><span class="boxtext"></span></div>
+            <div class="box bt-0 bl-0"><span class="boxtext"></span></div>
+            <div class="box bt-0 bl-0"><span class="boxtext"></span></div>
+            <div class="box bt-0 br-0 bl-0"><span class="boxtext"></span></div>
+            <div class="box bt-0 bl-0 bb-0"><span class="boxtext"></span></div>
+            <div class="box bt-0 bl-0 bb-0"><span class="boxtext"></span></div>
+            <div class="box bt-0 bl-0 bb-0 br-0"><span class="boxtext"></span></div>
+        </div>
+
+        <div class="gameInfo">
+            <h1>Welcome to Tic Tac Toe</h1>
+            <span class="info">Turn for X</span> <!-- Initially x ki turn -->
+            <div>
+                <button id="reset">Reset</button>
+            </div>
+
+            <div class="imgbox">
+                <img src="excited.gif" alt="" />
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="index.js"></script>
+
+</html>

@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #e2b448;
+}
+
+body {
+    color: var(--orange);
+    background-color: #2d414b;
+}
+
+nav {
+    background-color: #ad8a38;
+    color: white;
+    height: 65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    font-family: 'Finger Paint', cursive;
+    list-style-type: none;
+}
+
+.gameContainer {
+    /* dewaar sy na chupke bech mein le aye */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* grid (left container) */
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    /* 3 ke with 10vw jitna distance (responsive) */
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+
+}
+
+
+.box {
+    border: 2px solid #facc5f;
+    font-size: 6vw;
+    cursor: pointer;
+    /* andr ke X 0 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Finger Paint', cursive;
+}
+
+.box:hover {
+    background-color: #223139;
+}
+
+
+.gameInfo {
+    padding: 0 34px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.gameInfo h1 {
+    font-size: 2.5rem;
+}
+
+.info {
+    font-family: 'Finger Paint', cursive;
+    font-size: 22px;
+}
+
+.imgbox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+    /* kis trh samney arha gameover ke baad with after 1s */
+}
+
+#reset {
+
+    border: none;
+    margin: 4px 0px;
+    padding: 0px 18px;
+    background: #ad8a38;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.line {
+    height: 3px;
+    width: 20vw;
+    position: absolute;
+    /* container mein position relative is lia hi kia tha so it can easily come on where we want */
+    background-color: #2c2c2c;
+    transition: width 1s ease-in-out;
+}
+
+/* utility classes side walay border hatana ke lia */
+.br-0 {
+    border-right: 0;
+
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .gameContainer {
+        /* upper neeche ajaye gy */
+        flex-wrap: wrap;
+    }
+
+    .gameInfo {
+        margin-top: 34px;
+    }
+
+    .gameInfo h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+
+    .line {
+        width: 0vw !important;
+    }
+}

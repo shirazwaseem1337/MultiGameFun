@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+
+
+body {
+    background-color: wheat;
+    margin: 0px 0px;
+
+}
+
+header {
+    background: white;
+
+}
+
+header>h1 {
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px 5px;
+    text-align: center;
+
+}
+
+#textAnimation {
+    font-family: 'Mulish', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+
+.photocanva {
+    margin-top: -5px;
+    margin-left: 30px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 0.1fr 0.1fr;
+    margin: -1rem 0rem;
+    place-content: center;
+
+
+}
+
+
+.photo img {
+    width: auto;
+    height: 14rem;
+}
+
+.photocanva img {
+    margin-top: 15px;
+    /* width: 14rem; */
+    height: 11rem;
+}
+
+/* for tic tac */
+
+.phototic {
+    position: relative;
+}
+
+.image-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-overlay:hover img {
+    opacity: 0.7;
+    /* Reduce image opacity on hover */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-overlay:hover .overlay-text {
+    opacity: 1;
+    /* Display overlay text on image hover */
+}
+
+.overlay-text a {
+    font-family: 'Mulish', sans-serif;
+    text-decoration: none;
+    color: #130101;
+    /* Text color */
+    font-size: 18px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    /* Adjust font weight as needed */
+}
+
+.overlay-text p {
+    margin: 0px 0px;
+    font-weight: bolder;
+}
+
+.overlay-text a:hover {
+    text-decoration: underline;
+    /* Underline links on hover */
+}
+
+
+/* @media screen {
+    .images {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .photo1 img {
+        margin-left: -47px;
+
+    } */
+
+/* 432 x 570 */
+/* } */

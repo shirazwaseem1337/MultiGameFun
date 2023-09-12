@@ -1,0 +1,139 @@
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #E3F2FD;
+}
+
+.wrapper {
+    width: 90vmin;
+    height: 90vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    background: #213727;
+    box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+}
+
+.game-details {
+    margin-top: 2rem;
+    color: #B8C6DC;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 10px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#board {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background: #32523a;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+
+    /* border: 2px solid black; */
+    /* background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167)); */
+
+
+
+}
+
+#board .food {
+    background: #FF003D;
+    border: .25vmin solid rgb(255, 255, 255);
+    transform: scale(1.02);
+    border-radius: 4px;
+}
+
+.head {
+    background: url(snake.png);
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 22;
+    height: 2rem;
+    width: 2rem;
+}
+
+#board .snake {
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        width: 90vmin;
+        height: 95vmin;
+    }
+
+    .game-details {
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        width: 90vmin;
+        height: 95vmin;
+    }
+
+    .game-details {
+        font-size: 1rem;
+        padding: 15px 27px;
+        margin-top: 0px;
+    }
+
+    #board .food {
+        background: #FF003D;
+        border: .25vmin solid rgb(255, 255, 255);
+        transform: scale(0.8);
+        border-radius: 4px;
+    }
+
+    .head {
+
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 382px) {
+
+
+    .game-details {
+        padding: 17px 27px;
+        margin-top: 43px;
+    }
+
+    #board .food {
+        background: #FF003D;
+        border: .25vmin solid rgb(255, 255, 255);
+        transform: scale(0.8);
+        border-radius: 4px;
+    }
+
+    .head {
+
+        height: 1em;
+        width: 1rem;
+    }
+}

@@ -1,0 +1,28 @@
+
+
+Sab sy phely we get it from localstorage agar null ha tw set krdety item and set krte waqt in stringify
+agar we need that item tw we use parse and using parse get the value and stored it and display it
+parse ki jagah stringify likhte tw value display "" ke andr huti
+
+
+agar koi new score banaya tw we get that score set it in stringify and display it
+
+
+
+
+let hiscore = localStorage.getItem("hiscore");  // console mein null arha
+if (hiscore === null) {
+    hiscoreval = 0;
+    localStorage.setItem("hiscore", JSON.stringify(hiscoreval))
+}
+else {
+    hiscoreval = JSON.parse(hiscore);         // hiscore = localStorage.getItem("hiscore");
+    hiscoreBox.innerHTML = "HiScore: " + hiscore;
+}
+
+
+if (score > hiscoreval) {
+            hiscoreval = score;
+            localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
+            hiscoreBox.innerHTML = "HiScore: " + hiscoreval;   // new wala set
+        }

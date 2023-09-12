@@ -1,0 +1,22 @@
+Certainly, let's break down the logic step by step for the computerMove function:
+
+Checking if the game is over:
+
+The function starts with a check to see if the game is already over (if (isgameover)). If the isgameover variable is true, it means the game has ended (either someone has won or it's a tie). In this case, the function returns immediately, and no further moves are made by the computer.
+Finding Empty Boxes:
+
+The code uses the Array.from method to convert the HTMLCollection of boxes into an array.
+It then filters this array to find all the empty boxes. Empty boxes are those where the innerText of the associated .boxtext element is an empty string (""). This ensures that the computer selects only boxes that haven't been marked by the players.
+Choosing a Random Empty Box:
+
+If there are empty boxes available (i.e., emptyBoxes.length > 0), the code proceeds.
+It generates a random index (randomIndex) within the range of available empty boxes. This random index is used to select one of the empty boxes for the computer's move.
+Introducing a Delay:
+
+To simulate the computer "thinking" for a moment before making a move, a setTimeout function is used. This function delays the execution of the code within it by a specified number of milliseconds. In this case, there's a 1000 millisecond (1 second) delay before the computer makes its move.
+Making the Computer's Move:
+
+After the delay, the code inside the setTimeout callback function is executed. This includes marking the selected empty box with "0" (representing the computer's move), updating the turn to switch to the player's turn (so the players can take their turns alternately), playing an audio effect (if any) to indicate the computer's move, and checking if the game has ended due to a win or a tie.
+Updating the Game Information:
+
+If the game is not over after the computer's move (i.e., if (!isgameover)), the code updates the information displayed to the user. Specifically, it updates the text indicating whose turn it is next.

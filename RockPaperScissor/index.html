@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockPaperScissor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+
+
+    <div class="score-board">
+        <div id="user-label" class="badge">user</div>
+        <div id="computer-label" class="badge">comp</div>
+        <h3>
+            <span id="user-score">0</span>:<span id="computer-score">0</span>
+        </h3>
+    </div>
+
+
+    <h2 style="text-align: center; font-size: 20px;"><span id="user-choice"></span></h2>
+    <h2 style="text-align: center; font-size: 20px;"><span id="computer-choice"></span></h2>
+    <p id="result">Waiting for User turn</p>
+
+    <div class="choices">
+        <div class="choice">
+            <img id="rock" src="Images/rock.png" alt="">
+        </div>
+        <div class="choice">
+            <img id="paper" src="Images/paper.png" alt="">
+        </div>
+        <div class="choice">
+            <img id="scissors" src="Images/scissors.png" alt="">
+        </div>
+    </div>
+
+    <p id="action-message">Make your move</p>
+
+    <p id="winner"></p>
+
+    <div class="button-container">
+        <button class="button" id="restart">Restart Game</button>
+        <button class="button" style="margin-top: 10px;" id="playagain"></button>
+    </div>
+
+    <p id="over"></p>
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
