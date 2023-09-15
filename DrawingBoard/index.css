@@ -80,6 +80,9 @@ canvas {
 }
 
 
+
+
+
 @media screen and (max-width: 820px) {
 
     .tools {
@@ -100,6 +103,12 @@ canvas {
     }
 
     .pen-range {
+        margin: 5px 0px;
+    }
+
+    .colorscombo {
+        display: flex;
+        justify-content: center;
         margin: 5px 0px;
     }
 }

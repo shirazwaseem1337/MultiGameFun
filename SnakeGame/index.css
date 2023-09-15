@@ -29,7 +29,7 @@ body {
 }
 
 .game-details {
-    margin-top: 2rem;
+    margin-top: 7rem;
     color: #B8C6DC;
     font-weight: 500;
     font-size: 1.2rem;
@@ -78,6 +78,32 @@ body {
     border-radius: 4px;
 }
 
+
+.mobile-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center the buttons vertically */
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.mobile-controls button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.mobile-controls button:hover {
+    background-color: #45a049;
+}
+
 @media screen and (max-width: 800px) {
     .wrapper {
         width: 90vmin;
@@ -85,8 +111,7 @@ body {
     }
 
     .game-details {
-        font-size: 1rem;
-        padding: 15px 27px;
+        margin-top: 5rem;
     }
 }
 
@@ -110,19 +135,26 @@ body {
     }
 
     .head {
-
         height: 1.2rem;
         width: 1.2rem;
     }
+
+    .mobile-controls button {
+        font-size: 8px;
+    }
 }
 
-@media screen and (max-width: 382px) {
-
-
-    .game-details {
-        padding: 17px 27px;
-        margin-top: 43px;
+@media screen and (max-width: 457px) {
+    .wrapper {
+        height: 112vmin;
     }
+}
+
+
+
+
+
+@media screen and (max-width: 382px) {
 
     #board .food {
         background: #FF003D;
@@ -132,8 +164,41 @@ body {
     }
 
     .head {
-
         height: 1em;
         width: 1rem;
+    }
+}
+
+@media screen and (max-width: 328px) {
+
+    .wrapper {
+        height: 145vmin;
+    }
+
+    .mobile-controls button {
+
+        padding: 9px 16px;
+        margin: 1px 4px;
+    }
+
+    .mobile-controls button {
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 252px) {
+
+    .wrapper {
+        height: 160vmin;
+    }
+
+    .mobile-controls button {
+
+        padding: 9px 16px;
+        margin: 1px 4px;
+    }
+
+    .mobile-controls button {
+        font-size: 7px;
     }
 }

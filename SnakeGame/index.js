@@ -234,3 +234,37 @@ window.addEventListener("keydown", e => {     // keydown koi bhi button
     }
 }
 )
+
+// Add event listeners for mobile arrow buttons
+const upButton = document.getElementById("upButton");
+const downButton = document.getElementById("downButton");
+const leftButton = document.getElementById("leftButton");
+const rightButton = document.getElementById("rightButton");
+
+upButton.addEventListener("click", () => {
+    if (inputDir.y !== 1) {
+        inputDir.x = 0;
+        inputDir.y = -1;
+    }
+});
+
+downButton.addEventListener("click", () => {
+    if (inputDir.y !== -1) {
+        inputDir.x = 0;
+        inputDir.y = 1;
+    }
+});
+
+leftButton.addEventListener("click", () => {
+    if (inputDir.x !== 1) {
+        inputDir.x = -1;
+        inputDir.y = 0;
+    }
+});
+
+rightButton.addEventListener("click", () => {
+    if (inputDir.x !== -1) {
+        inputDir.x = 1;
+        inputDir.y = 0;
+    }
+});

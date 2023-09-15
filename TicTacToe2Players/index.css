@@ -85,7 +85,7 @@ nav ul {
 }
 
 .imgbox img {
-    width: 20vw;
+    width: 0;
     transition: width 1s ease-in-out;
     /* kis trh samney arha gameover ke baad with after 1s */
 }

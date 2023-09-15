@@ -16,17 +16,15 @@
             <button class="button" onClick="undo_last()" type="button">Undo</button>
             <button class="button" onClick="clear_button()" type="button">Clear</button>
 
-
             <!-- this mein given whole element actually style chae of the element -->
-            <div class="color-field" onClick="change_color(this)" style="background: rgb(93, 255, 93);"></div>
-            <div onClick="change_color(this)" class="color-field" style="background: rgb(159, 74, 88);"></div>
-            <div onClick="change_color(this)" class="color-field" style="background: rgb(108, 165, 188);"></div>
-            <div onClick="change_color(this)" class="color-field" style="background: orange;"></div>
+            <div class="colorscombo">
+                <div class="color-field" onClick="change_color(this)" style="background: rgb(93, 255, 93);"></div>
+                <div onClick="change_color(this)" class="color-field" style="background: rgb(159, 74, 88);"></div>
+                <div onClick="change_color(this)" class="color-field" style="background: rgb(108, 165, 188);"></div>
+                <div onClick="change_color(this)" class="color-field" style="background: orange;"></div>
+            </div>
 
             <button class="button" id="eraserButton" onClick="toggleEraser()" type="button">Eraser</button>
-
-
-
 
             <!-- color-picker -->
             <input type="color" class="color-picker" onInput="draw_color = this.value">
